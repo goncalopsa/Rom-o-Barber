@@ -14,8 +14,8 @@ namespace Romão_Barber
 {
     public partial class Login : Form
     {
-        BindingList<Utilizador> utilizadores = new BindingList<Utilizador>();
-        MySqlConnection ligacao;
+        //BindingList<Barbeiro> barbeiros = new BindingList<Barbeiro>();
+
         public Login()
         {
             InitializeComponent();
@@ -25,24 +25,11 @@ namespace Romão_Barber
         {
             Application.Exit();
         }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            saidapequena.Hide();
-            saidagrande.Show();
-        }
-
-        private void saidagrande_MouseLeave(object sender, EventArgs e)
-        {
-            saidagrande.Hide();
-            saidapequena.Show();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (tbemail.Text == "" || tbpass.Text == "")
             {
-                MessageBox.Show("Palavra Passe ou Nome Incorretos", "Erro");
+                MessageBox.Show("Preencha todos os campos", "Erro");
             }
             else
             {
@@ -52,11 +39,12 @@ namespace Romão_Barber
                     using (ligacao = new MySqlConnection("Persist Security Info=false; server=localhost; database=Barbearia; uid=root; SslMode=none"))
                     {
                         ligacao.Open();
-                        string sql = "SELECT * FROM utilizador Where Email_Utilizador=@nome and Palavra_Passe= AES_Encrypt(@palavra, '1234')";
+                        string sql = "SELECT * FROM barbeiros Where NIF=@nif and Palavra_Passe= AES_Encrypt(@palavra, @chave)";
                         using (MySqlCommand comando = new MySqlCommand(sql, ligacao))
                         {
-                            comando.Parameters.AddWithValue("@nome", tbemail.Text);
+                            comando.Parameters.AddWithValue("@nif", tbemail.Text);
                             comando.Parameters.AddWithValue("@palavra", tbpass.Text);
+                            comando.Parameters.AddWithValue("@chave", VariaveisGlobais.ChaveEncrypt);
 
                             int nRegistos = 0;
                             using (MySqlDataReader registo = comando.ExecuteReader())
@@ -64,29 +52,83 @@ namespace Romão_Barber
                                 while (registo.Read())
                                 {
                                     nRegistos++;
-                                    VariaveisGlobais.NomeUtilApp = registo["Nome_Utilizador"].ToString();
-                                    VariaveisGlobais.TipoUtilApp = registo["Tipo"].ToString();
+                                    VariaveisGlobais.NomeUtilApp = registo["nome"].ToString();
+                                    VariaveisGlobais.TipoUtilApp = "Barbeiro";
+                                    VariaveisGlobais.IdUtilApp = (int)registo["id_barbeiro"];
                                 }
-                                if (nRegistos > 0)
+                                ligacao.Close();
+                                ligacao.Open();
+                                string sql1 = "SELECT * FROM clientes Where NIF=@nif and Palavra_Passe= AES_Encrypt(@palavra, @chave)";
+                                using (MySqlCommand comando1 = new MySqlCommand(sql1, ligacao))
                                 {
-                                    Inicial formapp = new Inicial();
-                                    formapp.Show();
-                                    this.Hide();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Utilizador ou Palavra Passe não existem");
+                                    comando1.Parameters.AddWithValue("@nif", tbemail.Text);
+                                    comando1.Parameters.AddWithValue("@palavra", tbpass.Text);
+                                    comando1.Parameters.AddWithValue("@chave", VariaveisGlobais.ChaveEncrypt);
+
+                                    using (MySqlDataReader registo1 = comando1.ExecuteReader())
+                                    {
+                                        while (registo1.Read())
+                                        {
+                                            nRegistos++;
+                                            VariaveisGlobais.NomeUtilApp = registo1["nome"].ToString();
+                                            VariaveisGlobais.TipoUtilApp = "Cliente";
+                                            VariaveisGlobais.IdUtilApp = (int)registo1["id_cliente"];
+                                        }
+                                        if (nRegistos > 0)
+                                        {
+                                            Inicial formapp = new Inicial();
+                                            formapp.Show();
+                                            this.Hide();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Utilizador ou Palavra Passe não existem");
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
-
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Registar f = new Registar();
+            f.ShowDialog();
+
+        }
+
+        private void pbpa_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pbpa_MouseLeave(object sender, EventArgs e)
+        {
+            pbpa.Hide();
+            pbpf.Show();
+        }
+
+        private void pbpf_MouseHover(object sender, EventArgs e)
+        {
+            pbpf.Hide();
+            pbpa.Show();
+        }
+
+        private void pbpf_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Romão_Barber
 {
-    public partial class Funcionarios: Form
+    public partial class DetalhesBarbeiro: Form
     {
-        public Funcionarios()
+        public DetalhesBarbeiro()
         {
             InitializeComponent();
         }

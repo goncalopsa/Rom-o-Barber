@@ -19,10 +19,60 @@ namespace Romão_Barber
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Funcionarios b = new Funcionarios();
+            Barbeiros b = new Barbeiros();
 
             b.Show();
             this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Servicos j = new Servicos();
+            j.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inicial_Load(object sender, EventArgs e)
+        {
+            lbtipo.Text = VariaveisGlobais.TipoUtilApp;
+            lbnome.Text = VariaveisGlobais.NomeUtilApp;
+            if (VariaveisGlobais.TipoUtilApp == "Barbeiro")
+            {
+                pbc.Visible = true;
+                lbc.Visible = true;
+            }
+            else
+            {
+                pbc.Visible = false;
+                lbc.Visible = false;
+            }
+        }
+
+        private void pbc_Click(object sender, EventArgs e)
+        {
+            Clientes d = new Clientes();
+            d.ShowDialog();
+        }
+
+        private void pbpa_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pbpf_MouseHover(object sender, EventArgs e)
+        {
+            pbpf.Hide();
+            pbpa.Show();
+        }
+
+        private void pbpa_MouseLeave(object sender, EventArgs e)
+        {
+            pbpa.Hide();
+            pbpf.Show();
         }
     }
 }
