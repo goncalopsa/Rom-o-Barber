@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Romão_Barber
 {
-    public partial class DetalhesBarbeiro: Form
+    public partial class DetalhesBarbeiro : Form
     {
         public DetalhesBarbeiro()
         {
             InitializeComponent();
+        }
+
+        private void DetalhesBarbeiro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

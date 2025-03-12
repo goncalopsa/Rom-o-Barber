@@ -21,5 +21,11 @@ namespace Romão_Barber
         {
             //inserir clientes
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login f = new Login();
+            f.ShowDialog();
+        }
     }
 }

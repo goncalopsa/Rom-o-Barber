@@ -28,121 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            btguardar = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registar));
+            pbcodqr = new PictureBox();
+            lbscan = new Label();
+            lbou = new Label();
+            button1 = new Button();
+            label5 = new Label();
+            label6 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            dateTimePicker2 = new DateTimePicker();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbcodqr).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // pbcodqr
             // 
-            textBox1.Location = new Point(104, 80);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 0;
+            pbcodqr.Location = new Point(620, 14);
+            pbcodqr.Name = "pbcodqr";
+            pbcodqr.Size = new Size(255, 156);
+            pbcodqr.SizeMode = PictureBoxSizeMode.Zoom;
+            pbcodqr.TabIndex = 27;
+            pbcodqr.TabStop = false;
             // 
-            // textBox2
+            // lbscan
             // 
-            textBox2.Location = new Point(104, 199);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 1;
+            lbscan.AutoSize = true;
+            lbscan.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbscan.Location = new Point(727, 173);
+            lbscan.Name = "lbscan";
+            lbscan.Size = new Size(48, 16);
+            lbscan.TabIndex = 26;
+            lbscan.Text = "SCAN QR";
             // 
-            // dateTimePicker1
+            // lbou
             // 
-            dateTimePicker1.Location = new Point(104, 133);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 2;
+            lbou.AutoSize = true;
+            lbou.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbou.Location = new Point(488, 76);
+            lbou.Name = "lbou";
+            lbou.Size = new Size(49, 32);
+            lbou.TabIndex = 25;
+            lbou.Text = "OU";
             // 
-            // textBox3
+            // button1
             // 
-            textBox3.Location = new Point(104, 28);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 3;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(297, 64);
+            button1.Name = "button1";
+            button1.Size = new Size(98, 44);
+            button1.TabIndex = 24;
+            button1.Text = "Guardar";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // label5
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(37, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 4;
-            label1.Text = "label1";
+            label5.AutoSize = true;
+            label5.Location = new Point(20, 159);
+            label5.Name = "label5";
+            label5.Size = new Size(114, 15);
+            label5.TabIndex = 23;
+            label5.Text = "Data de Nascimento";
+            label5.TextAlign = ContentAlignment.TopRight;
             // 
-            // label2
+            // label6
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(37, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 5;
-            label2.Text = "label2";
+            label6.AutoSize = true;
+            label6.Location = new Point(89, 27);
+            label6.Name = "label6";
+            label6.Size = new Size(40, 15);
+            label6.TabIndex = 22;
+            label6.Text = "Nome";
+            label6.TextAlign = ContentAlignment.TopRight;
             // 
-            // label3
+            // label8
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(37, 133);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 6;
-            label3.Text = "label3";
+            label8.AutoSize = true;
+            label8.Location = new Point(91, 67);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 15);
+            label8.TabIndex = 20;
+            label8.Text = "NIF";
+            label8.TextAlign = ContentAlignment.TopRight;
             // 
-            // label4
+            // label9
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(37, 199);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 7;
-            label4.Text = "label4";
+            label9.AutoSize = true;
+            label9.Location = new Point(52, 112);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 15);
+            label9.TabIndex = 19;
+            label9.Text = "Palavra Passe";
+            label9.TextAlign = ContentAlignment.TopRight;
             // 
-            // btguardar
+            // dateTimePicker2
             // 
-            btguardar.Location = new Point(277, 199);
-            btguardar.Name = "btguardar";
-            btguardar.Size = new Size(75, 23);
-            btguardar.TabIndex = 8;
-            btguardar.Text = "Guardar";
-            btguardar.UseVisualStyleBackColor = true;
-            btguardar.Click += button1_Click;
+            dateTimePicker2.Location = new Point(140, 153);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(200, 23);
+            dateTimePicker2.TabIndex = 17;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(140, 109);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 16;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(140, 64);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(100, 23);
+            textBox5.TabIndex = 15;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(140, 24);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(100, 23);
+            textBox6.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-26, -6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 28;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Registar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(446, 247);
+            ClientSize = new Size(887, 199);
             ControlBox = false;
-            Controls.Add(btguardar);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(pictureBox1);
+            Controls.Add(pbcodqr);
+            Controls.Add(lbscan);
+            Controls.Add(lbou);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(label6);
+            Controls.Add(label8);
+            Controls.Add(label9);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(textBox4);
+            Controls.Add(textBox5);
+            Controls.Add(textBox6);
             Name = "Registar";
+            StartPosition = FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)pbcodqr).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox3;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Button btguardar;
+        private PictureBox pbcodqr;
+        private Label lbscan;
+        private Label lbou;
+        private Button button1;
+        private Label label5;
+        private Label label6;
+        private Label label8;
+        private Label label9;
+        private DateTimePicker dateTimePicker2;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private PictureBox pictureBox1;
     }
 }

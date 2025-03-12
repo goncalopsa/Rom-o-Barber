@@ -27,7 +27,7 @@ namespace Romão_Barber
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (tbemail.Text == "" || tbpass.Text == "")
+            if (tbemail.Text == "" || tbpassword.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos", "Erro");
             }
@@ -43,7 +43,7 @@ namespace Romão_Barber
                         using (MySqlCommand comando = new MySqlCommand(sql, ligacao))
                         {
                             comando.Parameters.AddWithValue("@nif", tbemail.Text);
-                            comando.Parameters.AddWithValue("@palavra", tbpass.Text);
+                            comando.Parameters.AddWithValue("@palavra", tbpassword.Text);
                             comando.Parameters.AddWithValue("@chave", VariaveisGlobais.ChaveEncrypt);
 
                             int nRegistos = 0;
@@ -62,7 +62,7 @@ namespace Romão_Barber
                                 using (MySqlCommand comando1 = new MySqlCommand(sql1, ligacao))
                                 {
                                     comando1.Parameters.AddWithValue("@nif", tbemail.Text);
-                                    comando1.Parameters.AddWithValue("@palavra", tbpass.Text);
+                                    comando1.Parameters.AddWithValue("@palavra", tbpassword.Text);
                                     comando1.Parameters.AddWithValue("@chave", VariaveisGlobais.ChaveEncrypt);
 
                                     using (MySqlDataReader registo1 = comando1.ExecuteReader())
@@ -109,26 +109,17 @@ namespace Romão_Barber
             Application.Exit();
         }
 
-        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
+            pbolhofechado.Hide();
+            tbpassword.PasswordChar = '*';
         }
 
-        private void pbpa_MouseLeave(object sender, EventArgs e)
+        private void pbolhoaberto_Click(object sender, EventArgs e)
         {
-            pbpa.Hide();
-            pbpf.Show();
-        }
-
-        private void pbpf_MouseHover(object sender, EventArgs e)
-        {
-            pbpf.Hide();
-            pbpa.Show();
-        }
-
-        private void pbpf_Click(object sender, EventArgs e)
-        {
-
+            pbolhofechado.Show();
+            tbpassword.PasswordChar = '\0';
         }
     }
 }

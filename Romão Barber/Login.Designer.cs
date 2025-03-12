@@ -30,45 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             tbemail = new TextBox();
-            tbpass = new TextBox();
             pblogin = new PictureBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            pbpf = new PictureBox();
-            pbpa = new PictureBox();
+            tbpassword = new TextBox();
+            pbolhofechado = new PictureBox();
+            pbolhoaberto = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pblogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbpf).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbpa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbolhofechado).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbolhoaberto).BeginInit();
             SuspendLayout();
             // 
             // tbemail
             // 
             tbemail.Anchor = AnchorStyles.None;
-            tbemail.Location = new Point(296, 178);
+            tbemail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbemail.Location = new Point(262, 124);
             tbemail.Name = "tbemail";
             tbemail.PlaceholderText = "email";
-            tbemail.Size = new Size(208, 23);
+            tbemail.Size = new Size(238, 39);
             tbemail.TabIndex = 2;
             tbemail.Text = "123456789";
-            // 
-            // tbpass
-            // 
-            tbpass.Anchor = AnchorStyles.None;
-            tbpass.Location = new Point(296, 207);
-            tbpass.Name = "tbpass";
-            tbpass.PlaceholderText = "palavra-passe";
-            tbpass.Size = new Size(208, 23);
-            tbpass.TabIndex = 3;
-            tbpass.Text = "admin";
             // 
             // pblogin
             // 
             pblogin.Anchor = AnchorStyles.None;
             pblogin.Image = (Image)resources.GetObject("pblogin.Image");
-            pblogin.Location = new Point(329, 234);
+            pblogin.Location = new Point(262, 169);
             pblogin.Name = "pblogin";
-            pblogin.Size = new Size(142, 121);
+            pblogin.Size = new Size(238, 193);
             pblogin.SizeMode = PictureBoxSizeMode.Zoom;
             pblogin.TabIndex = 4;
             pblogin.TabStop = false;
@@ -78,9 +69,9 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(710, 396);
+            pictureBox1.Location = new Point(679, 365);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.Size = new Size(131, 81);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -91,39 +82,49 @@
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(714, 437);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(683, 431);
             label1.Name = "label1";
-            label1.Size = new Size(89, 15);
+            label1.Size = new Size(119, 21);
             label1.TabIndex = 6;
             label1.Text = "Novo Utilizador";
             // 
-            // pbpf
+            // tbpassword
             // 
-            pbpf.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbpf.Image = (Image)resources.GetObject("pbpf.Image");
-            pbpf.Location = new Point(639, -8);
-            pbpf.Name = "pbpf";
-            pbpf.Size = new Size(211, 98);
-            pbpf.SizeMode = PictureBoxSizeMode.Zoom;
-            pbpf.TabIndex = 7;
-            pbpf.TabStop = false;
-            pbpf.Click += pbpf_Click;
-            pbpf.MouseHover += pbpf_MouseHover;
+            tbpassword.Anchor = AnchorStyles.None;
+            tbpassword.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbpassword.Location = new Point(262, 179);
+            tbpassword.Name = "tbpassword";
+            tbpassword.PasswordChar = '*';
+            tbpassword.PlaceholderText = "palavra-passe";
+            tbpassword.Size = new Size(238, 39);
+            tbpassword.TabIndex = 9;
+            tbpassword.Text = "admin";
             // 
-            // pbpa
+            // pbolhofechado
             // 
-            pbpa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbpa.Image = (Image)resources.GetObject("pbpa.Image");
-            pbpa.Location = new Point(679, -7);
-            pbpa.Name = "pbpa";
-            pbpa.Size = new Size(171, 100);
-            pbpa.SizeMode = PictureBoxSizeMode.Zoom;
-            pbpa.TabIndex = 8;
-            pbpa.TabStop = false;
-            pbpa.Visible = false;
-            pbpa.Click += pbpa_Click;
-            pbpa.MouseClick += pictureBox3_MouseClick;
-            pbpa.MouseLeave += pbpa_MouseLeave;
+            pbolhofechado.Anchor = AnchorStyles.None;
+            pbolhofechado.Image = (Image)resources.GetObject("pbolhofechado.Image");
+            pbolhofechado.Location = new Point(528, 154);
+            pbolhofechado.Name = "pbolhofechado";
+            pbolhofechado.Size = new Size(53, 100);
+            pbolhofechado.SizeMode = PictureBoxSizeMode.Zoom;
+            pbolhofechado.TabIndex = 12;
+            pbolhofechado.TabStop = false;
+            pbolhofechado.Visible = false;
+            pbolhofechado.Click += pictureBox3_Click;
+            // 
+            // pbolhoaberto
+            // 
+            pbolhoaberto.Anchor = AnchorStyles.None;
+            pbolhoaberto.Image = (Image)resources.GetObject("pbolhoaberto.Image");
+            pbolhoaberto.Location = new Point(506, 189);
+            pbolhoaberto.Name = "pbolhoaberto";
+            pbolhoaberto.Size = new Size(98, 29);
+            pbolhoaberto.SizeMode = PictureBoxSizeMode.Zoom;
+            pbolhoaberto.TabIndex = 11;
+            pbolhoaberto.TabStop = false;
+            pbolhoaberto.Click += pbolhoaberto_Click;
             // 
             // Login
             // 
@@ -131,30 +132,30 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             ControlBox = false;
-            Controls.Add(pbpa);
-            Controls.Add(pbpf);
+            Controls.Add(pbolhofechado);
+            Controls.Add(pbolhoaberto);
+            Controls.Add(tbpassword);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(pblogin);
-            Controls.Add(tbpass);
             Controls.Add(tbemail);
             Name = "Login";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pblogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbpf).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbpa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbolhofechado).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbolhoaberto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private TextBox tbemail;
-        private TextBox tbpass;
         private PictureBox pblogin;
         private PictureBox pictureBox1;
         private Label label1;
-        private PictureBox pbpf;
-        private PictureBox pbpa;
+        private TextBox tbpassword;
+        private PictureBox pbolhofechado;
+        private PictureBox pbolhoaberto;
     }
 }

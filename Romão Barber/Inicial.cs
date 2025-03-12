@@ -60,7 +60,8 @@ namespace Romão_Barber
 
         private void pbpa_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login d = new Login();
+            d.ShowDialog();
         }
 
         private void pbpf_MouseHover(object sender, EventArgs e)
