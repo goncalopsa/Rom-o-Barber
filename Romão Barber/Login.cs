@@ -78,7 +78,7 @@ namespace Romão_Barber
         //        response.Close();
         //    }
         //}
-
+        
         //// Check if the user credentials are correct
         ////private bool CheckUserCredentials(string nif, string password)
         //{
