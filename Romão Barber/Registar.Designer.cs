@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registar));
-            pbcodqr = new PictureBox();
-            lbscan = new Label();
-            lbou = new Label();
             button1 = new Button();
             label5 = new Label();
             label6 = new Label();
@@ -42,38 +39,8 @@
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pbcodqr).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pbcodqr
-            // 
-            pbcodqr.Location = new Point(620, 14);
-            pbcodqr.Name = "pbcodqr";
-            pbcodqr.Size = new Size(255, 156);
-            pbcodqr.SizeMode = PictureBoxSizeMode.Zoom;
-            pbcodqr.TabIndex = 27;
-            pbcodqr.TabStop = false;
-            // 
-            // lbscan
-            // 
-            lbscan.AutoSize = true;
-            lbscan.Font = new Font("Impact", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbscan.Location = new Point(727, 173);
-            lbscan.Name = "lbscan";
-            lbscan.Size = new Size(48, 16);
-            lbscan.TabIndex = 26;
-            lbscan.Text = "SCAN QR";
-            // 
-            // lbou
-            // 
-            lbou.AutoSize = true;
-            lbou.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbou.Location = new Point(488, 76);
-            lbou.Name = "lbou";
-            lbou.Size = new Size(49, 32);
-            lbou.TabIndex = 25;
-            lbou.Text = "OU";
             // 
             // button1
             // 
@@ -168,12 +135,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(887, 199);
+            ClientSize = new Size(419, 199);
             ControlBox = false;
             Controls.Add(pictureBox1);
-            Controls.Add(pbcodqr);
-            Controls.Add(lbscan);
-            Controls.Add(lbou);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label6);
@@ -185,17 +149,12 @@
             Controls.Add(textBox6);
             Name = "Registar";
             StartPosition = FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)pbcodqr).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pbcodqr;
-        private Label lbscan;
-        private Label lbou;
         private Button button1;
         private Label label5;
         private Label label6;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalhesBarbeiro));
             btguardar = new Button();
             label3 = new Label();
             label2 = new Label();
@@ -37,30 +38,33 @@
             textBox1 = new TextBox();
             label7 = new Label();
             cb = new CheckBox();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btguardar
             // 
-            btguardar.Location = new Point(252, 180);
+            btguardar.Location = new Point(283, 94);
             btguardar.Name = "btguardar";
             btguardar.Size = new Size(75, 23);
             btguardar.TabIndex = 17;
             btguardar.Text = "Guardar";
             btguardar.UseVisualStyleBackColor = true;
+            btguardar.Click += btguardar_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 114);
+            label3.Location = new Point(38, 70);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(114, 15);
             label3.TabIndex = 15;
-            label3.Text = "label3";
+            label3.Text = "Data de Nascimento";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 64);
+            label2.Location = new Point(127, 38);
             label2.Name = "label2";
             label2.Size = new Size(25, 15);
             label2.TabIndex = 14;
@@ -69,7 +73,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
+            label1.Location = new Point(112, 9);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 13;
@@ -77,21 +81,21 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(79, 9);
+            textBox3.Location = new Point(158, 6);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(79, 114);
+            dateTimePicker1.Location = new Point(158, 64);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 11;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(79, 61);
+            textBox1.Location = new Point(158, 35);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 9;
@@ -99,7 +103,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(26, 180);
+            label7.Location = new Point(112, 94);
             label7.Name = "label7";
             label7.Size = new Size(35, 15);
             label7.TabIndex = 23;
@@ -109,19 +113,31 @@
             // cb
             // 
             cb.AutoSize = true;
-            cb.Location = new Point(75, 176);
+            cb.Location = new Point(158, 93);
             cb.Name = "cb";
             cb.Size = new Size(82, 19);
             cb.TabIndex = 22;
             cb.Text = "checkBox1";
             cb.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-25, -8);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // DetalhesBarbeiro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(382, 223);
+            ClientSize = new Size(382, 125);
             ControlBox = false;
+            Controls.Add(pictureBox1);
             Controls.Add(label7);
             Controls.Add(cb);
             Controls.Add(btguardar);
@@ -134,6 +150,7 @@
             Name = "DetalhesBarbeiro";
             WindowState = FormWindowState.Maximized;
             Load += DetalhesBarbeiro_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +166,6 @@
         private TextBox textBox1;
         private Label label7;
         private CheckBox cb;
+        private PictureBox pictureBox1;
     }
 }

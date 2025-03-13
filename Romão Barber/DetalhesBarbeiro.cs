@@ -21,5 +21,17 @@ namespace Romão_Barber
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login f = new Login();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void btguardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

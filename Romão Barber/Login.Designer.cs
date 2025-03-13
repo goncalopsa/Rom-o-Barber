@@ -112,7 +112,6 @@
             pbolhofechado.TabIndex = 12;
             pbolhofechado.TabStop = false;
             pbolhofechado.Visible = false;
-            pbolhofechado.Click += pictureBox3_Click;
             // 
             // pbolhoaberto
             // 
@@ -124,7 +123,6 @@
             pbolhoaberto.SizeMode = PictureBoxSizeMode.Zoom;
             pbolhoaberto.TabIndex = 11;
             pbolhoaberto.TabStop = false;
-            pbolhoaberto.Click += pbolhoaberto_Click;
             // 
             // Login
             // 
@@ -141,7 +139,6 @@
             Controls.Add(tbemail);
             Name = "Login";
             WindowState = FormWindowState.Maximized;
-            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pblogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbolhofechado).EndInit();
