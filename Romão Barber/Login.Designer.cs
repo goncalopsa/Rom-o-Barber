@@ -141,6 +141,7 @@
             Controls.Add(tbemail);
             Name = "Login";
             WindowState = FormWindowState.Maximized;
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pblogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbolhofechado).EndInit();

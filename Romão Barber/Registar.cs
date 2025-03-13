@@ -26,6 +26,7 @@ namespace Romão_Barber
         {
             Login f = new Login();
             f.ShowDialog();
+            this.Close();
         }
     }
 }
