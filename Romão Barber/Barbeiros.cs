@@ -23,36 +23,13 @@ namespace Romão_Barber
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = "select * from barbeiros where Nome like @nome;";
-                barbeiros = new BindingList<Barbeiro>();
-                using (MySqlCommand cmd = new MySqlCommand(sql, ligacao))
-                {
-                    cmd.Parameters.AddWithValue("@nome", "%" + tbpesquisar.Text + "%");
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            barbeiros.Add(new Barbeiro(reader.GetInt32("iD_Barbeiro"),
-                                reader.GetString("Nome")));
-                        }
-                    }
-                }
-                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
-                dgv.MultiSelect = false;
-                dgv.DataSource = barbeiros;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            listaBarbeiros();
         }
         private void listaBarbeiros()
         {
             try
             {
+                ligacao.Open();
                 string sql = "select * from barbeiros ";
 
                 if (!string.IsNullOrWhiteSpace(tbpesquisar.Text))
@@ -72,8 +49,12 @@ namespace Romão_Barber
                         while (reader.Read())
                         {
                             int idu = reader.GetInt32("iD_Barbeiro");
+                            String nome = reader.GetString("nome");
+                            DateTime data = reader.GetDateTime("data_Nascimento");
+                            String nif = reader.GetString("nif");
+                            int ativo = reader.GetInt32("ativo");
 
-                            Barbeiro x = new Barbeiro(reader.GetInt32("iD_Barbeiro"), reader.GetString("nome"));
+                            Barbeiro x = new Barbeiro(idu, nome, data, nif, ativo);
 
                             barbeiros.Add(x);
 
@@ -85,15 +66,12 @@ namespace Romão_Barber
                 dgv.MultiSelect = false;
                 dgv.DataSource = barbeiros;
                 dgv.Columns[0].Visible = false;
+                ligacao.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-        private void Funcionarios_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void pbpf_MouseHover(object sender, EventArgs e)
@@ -110,7 +88,13 @@ namespace Romão_Barber
 
         private void pbpa_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void Barbeiros_Load(object sender, EventArgs e)
+        {
+            ligacao = new MySqlConnection("Persist Security Info=false; server=localhost; database=Barbearia; uid=root; SslMode=none");
+            listaBarbeiros();
         }
     }
 }

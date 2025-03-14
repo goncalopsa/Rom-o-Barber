@@ -20,9 +20,7 @@ namespace Romão_Barber
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Barbeiros b = new Barbeiros();
-
-            b.Show();
-            this.Close();
+            b.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -74,6 +72,11 @@ namespace Romão_Barber
         {
             pbpa.Hide();
             pbpf.Show();
+        }
+
+        private void pbpf_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,7 +46,6 @@ namespace Romão_Barber
                         while (reader.Read())
                         {
                             Servico x = new Servico(reader.GetInt32("iD_Servico"), reader.GetString("descricao"), reader.GetFloat("preco"));
-
                             servicos.Add(x);
 
                         }
@@ -57,6 +56,7 @@ namespace Romão_Barber
                 dgv.MultiSelect = false;
                 dgv.DataSource = servicos;
                 dgv.Columns[0].Visible = false;
+               
                 ligacao.Close();
             }
             catch (Exception ex)
@@ -77,7 +77,9 @@ namespace Romão_Barber
 
         private void pbpa_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Inicial d = new Inicial();
+            d.ShowDialog();
+            this.Close();
         }
 
         private void pbpf_MouseHover(object sender, EventArgs e)

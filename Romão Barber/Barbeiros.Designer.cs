@@ -30,33 +30,21 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Barbeiros));
-            dgv = new DataGridView();
             utilizadorBindingSource = new BindingSource(components);
             tbpesquisar = new TextBox();
             btcriar = new Button();
             pbpa = new PictureBox();
             pbpf = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
+            dgv = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)utilizadorBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbpa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbpf).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
-            // 
-            // dgv
-            // 
-            dgv.AllowUserToAddRows = false;
-            dgv.AllowUserToDeleteRows = false;
-            dgv.AutoGenerateColumns = false;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.DataSource = utilizadorBindingSource;
-            dgv.Location = new Point(78, 25);
-            dgv.Name = "dgv";
-            dgv.ReadOnly = true;
-            dgv.Size = new Size(605, 150);
-            dgv.TabIndex = 0;
             // 
             // tbpesquisar
             // 
+            tbpesquisar.Anchor = AnchorStyles.None;
             tbpesquisar.Location = new Point(78, 181);
             tbpesquisar.Name = "tbpesquisar";
             tbpesquisar.Size = new Size(100, 23);
@@ -65,6 +53,7 @@
             // 
             // btcriar
             // 
+            btcriar.Anchor = AnchorStyles.None;
             btcriar.Location = new Point(542, 181);
             btcriar.Name = "btcriar";
             btcriar.Size = new Size(141, 31);
@@ -98,31 +87,38 @@
             pbpf.TabStop = false;
             pbpf.MouseHover += pbpf_MouseHover;
             // 
+            // dgv
+            // 
+            dgv.Anchor = AnchorStyles.None;
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv.Location = new Point(78, 12);
+            dgv.Name = "dgv";
+            dgv.Size = new Size(605, 150);
+            dgv.TabIndex = 13;
+            // 
             // Barbeiros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(dgv);
             Controls.Add(pbpa);
             Controls.Add(pbpf);
             Controls.Add(btcriar);
             Controls.Add(tbpesquisar);
-            Controls.Add(dgv);
             Name = "Barbeiros";
             WindowState = FormWindowState.Maximized;
-            Load += Funcionarios_Load;
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
+            Load += Barbeiros_Load;
             ((System.ComponentModel.ISupportInitialize)utilizadorBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbpa).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbpf).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private DataGridView dgv;
         private DataGridViewTextBoxColumn iDUtilizadorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn palavraPasseDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nomeUtilizadorDataGridViewTextBoxColumn;
@@ -133,5 +129,6 @@
         private Button btcriar;
         private PictureBox pbpa;
         private PictureBox pbpf;
+        private DataGridView dgv;
     }
 }

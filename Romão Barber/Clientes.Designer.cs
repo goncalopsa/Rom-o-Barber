@@ -34,15 +34,17 @@
             button1 = new Button();
             pbpa = new PictureBox();
             pbpf = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbpa).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbpf).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // dgv
             // 
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(53, 24);
+            dgv.Location = new Point(135, 24);
             dgv.Name = "dgv";
             dgv.Size = new Size(540, 150);
             dgv.TabIndex = 0;
@@ -50,7 +52,7 @@
             // 
             // tbpesquisar
             // 
-            tbpesquisar.Location = new Point(53, 190);
+            tbpesquisar.Location = new Point(135, 180);
             tbpesquisar.Name = "tbpesquisar";
             tbpesquisar.Size = new Size(100, 23);
             tbpesquisar.TabIndex = 1;
@@ -58,11 +60,12 @@
             // 
             // button1
             // 
-            button1.Location = new Point(518, 189);
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(39, 24);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(90, 39);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Registar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -92,22 +95,35 @@
             pbpf.TabStop = false;
             pbpf.MouseHover += pbpf_MouseHover;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(231, 181);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(39, 23);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(pictureBox1);
             Controls.Add(pbpa);
             Controls.Add(pbpf);
             Controls.Add(button1);
             Controls.Add(tbpesquisar);
             Controls.Add(dgv);
             Name = "Clientes";
+            WindowState = FormWindowState.Maximized;
             Load += Clientes_Load;
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbpa).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbpf).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,5 +135,6 @@
         private Button button1;
         private PictureBox pbpa;
         private PictureBox pbpf;
+        private PictureBox pictureBox1;
     }
 }

@@ -44,9 +44,9 @@
             // 
             // btguardar
             // 
-            btguardar.Location = new Point(283, 94);
+            btguardar.Location = new Point(298, 48);
             btguardar.Name = "btguardar";
-            btguardar.Size = new Size(75, 23);
+            btguardar.Size = new Size(168, 25);
             btguardar.TabIndex = 17;
             btguardar.Text = "Guardar";
             btguardar.UseVisualStyleBackColor = true;
@@ -55,7 +55,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(38, 70);
+            label3.Location = new Point(52, 95);
             label3.Name = "label3";
             label3.Size = new Size(114, 15);
             label3.TabIndex = 15;
@@ -64,7 +64,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(127, 38);
+            label2.Location = new Point(96, 51);
             label2.Name = "label2";
             label2.Size = new Size(25, 15);
             label2.TabIndex = 14;
@@ -73,7 +73,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(112, 9);
+            label1.Location = new Point(81, 12);
             label1.Name = "label1";
             label1.Size = new Size(40, 15);
             label1.TabIndex = 13;
@@ -81,29 +81,29 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(158, 6);
+            textBox3.Location = new Point(127, 9);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
+            textBox3.Size = new Size(339, 23);
             textBox3.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(158, 64);
+            dateTimePicker1.Location = new Point(172, 89);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 11;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(158, 35);
+            textBox1.Location = new Point(127, 48);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(153, 23);
             textBox1.TabIndex = 9;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(112, 94);
+            label7.Location = new Point(392, 95);
             label7.Name = "label7";
             label7.Size = new Size(35, 15);
             label7.TabIndex = 23;
@@ -113,12 +113,12 @@
             // cb
             // 
             cb.AutoSize = true;
-            cb.Location = new Point(158, 93);
+            cb.Location = new Point(438, 96);
             cb.Name = "cb";
-            cb.Size = new Size(82, 19);
+            cb.Size = new Size(15, 14);
             cb.TabIndex = 22;
-            cb.Text = "checkBox1";
             cb.UseVisualStyleBackColor = true;
+            cb.CheckedChanged += cb_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -135,7 +135,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(382, 125);
+            ClientSize = new Size(504, 126);
             ControlBox = false;
             Controls.Add(pictureBox1);
             Controls.Add(label7);

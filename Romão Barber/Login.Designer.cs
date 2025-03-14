@@ -48,10 +48,9 @@
             tbemail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbemail.Location = new Point(262, 124);
             tbemail.Name = "tbemail";
-            tbemail.PlaceholderText = "email";
+            tbemail.PlaceholderText = "NIF";
             tbemail.Size = new Size(238, 39);
             tbemail.TabIndex = 2;
-            tbemail.Text = "123456789";
             // 
             // pblogin
             // 
@@ -99,7 +98,6 @@
             tbpassword.PlaceholderText = "palavra-passe";
             tbpassword.Size = new Size(238, 39);
             tbpassword.TabIndex = 9;
-            tbpassword.Text = "admin";
             // 
             // pbolhofechado
             // 
@@ -112,6 +110,8 @@
             pbolhofechado.TabIndex = 12;
             pbolhofechado.TabStop = false;
             pbolhofechado.Visible = false;
+            pbolhofechado.Click += pbolhofechado_Click;
+            pbolhofechado.MouseLeave += pbolhofechado_MouseLeave;
             // 
             // pbolhoaberto
             // 
@@ -123,11 +123,15 @@
             pbolhoaberto.SizeMode = PictureBoxSizeMode.Zoom;
             pbolhoaberto.TabIndex = 11;
             pbolhoaberto.TabStop = false;
+            pbolhoaberto.Click += pbolhoaberto_Click;
+            pbolhoaberto.MouseHover += pbolhoaberto_MouseHover;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             ControlBox = false;
             Controls.Add(pbolhofechado);
@@ -137,6 +141,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(pblogin);
             Controls.Add(tbemail);
+            DoubleBuffered = true;
             Name = "Login";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pblogin).EndInit();

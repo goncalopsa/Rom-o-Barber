@@ -157,6 +157,7 @@
             pbpf.SizeMode = PictureBoxSizeMode.Zoom;
             pbpf.TabIndex = 9;
             pbpf.TabStop = false;
+            pbpf.Click += pbpf_Click;
             pbpf.MouseHover += pbpf_MouseHover;
             // 
             // Inicial
