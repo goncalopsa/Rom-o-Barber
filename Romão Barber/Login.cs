@@ -93,30 +93,16 @@ namespace Romão_Barber
             }
 
         }
-
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             Registar a = new Registar();
             a.ShowDialog();
-
         }
-
-        private void pbolhofechado_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbolhoaberto_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
         private void pbolhoaberto_Click(object sender, EventArgs e)
         {
             tbpassword.PasswordChar = '\0';
             pbolhofechado.Show();
         }
-
         private void pbolhofechado_Click(object sender, EventArgs e)
         {
             tbpassword.PasswordChar = '*';

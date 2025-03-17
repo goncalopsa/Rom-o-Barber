@@ -48,7 +48,7 @@
             dgv.Name = "dgv";
             dgv.Size = new Size(540, 150);
             dgv.TabIndex = 0;
-            dgv.CellContentClick += dataGridView1_CellContentClick;
+         //   dgv.CellContentClick += dataGridView1_CellContentClick;
             // 
             // tbpesquisar
             // 

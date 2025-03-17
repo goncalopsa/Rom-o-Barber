@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registar));
-            button1 = new Button();
+            btguardar = new Button();
             label5 = new Label();
             label6 = new Label();
             label8 = new Label();
             label9 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            dtp = new DateTimePicker();
+            tbpass = new TextBox();
+            tbnif = new TextBox();
+            tbnome = new TextBox();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btguardar
             // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(297, 64);
-            button1.Name = "button1";
-            button1.Size = new Size(98, 44);
-            button1.TabIndex = 24;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            btguardar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btguardar.Location = new Point(297, 64);
+            btguardar.Name = "btguardar";
+            btguardar.Size = new Size(98, 44);
+            btguardar.TabIndex = 24;
+            btguardar.Text = "Guardar";
+            btguardar.UseVisualStyleBackColor = true;
+            btguardar.Click += button1_Click_1;
             // 
             // label5
             // 
@@ -92,33 +93,33 @@
             label9.Text = "Palavra Passe";
             label9.TextAlign = ContentAlignment.TopRight;
             // 
-            // dateTimePicker2
+            // dtp
             // 
-            dateTimePicker2.Location = new Point(140, 153);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 23);
-            dateTimePicker2.TabIndex = 17;
+            dtp.Location = new Point(140, 153);
+            dtp.Name = "dtp";
+            dtp.Size = new Size(200, 23);
+            dtp.TabIndex = 17;
             // 
-            // textBox4
+            // tbpass
             // 
-            textBox4.Location = new Point(140, 109);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 16;
+            tbpass.Location = new Point(140, 109);
+            tbpass.Name = "tbpass";
+            tbpass.Size = new Size(100, 23);
+            tbpass.TabIndex = 16;
             // 
-            // textBox5
+            // tbnif
             // 
-            textBox5.Location = new Point(140, 64);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 15;
+            tbnif.Location = new Point(140, 64);
+            tbnif.Name = "tbnif";
+            tbnif.Size = new Size(100, 23);
+            tbnif.TabIndex = 15;
             // 
-            // textBox6
+            // tbnome
             // 
-            textBox6.Location = new Point(140, 24);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 14;
+            tbnome.Location = new Point(140, 24);
+            tbnome.Name = "tbnome";
+            tbnome.Size = new Size(100, 23);
+            tbnome.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -138,15 +139,15 @@
             ClientSize = new Size(419, 199);
             ControlBox = false;
             Controls.Add(pictureBox1);
-            Controls.Add(button1);
+            Controls.Add(btguardar);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label8);
             Controls.Add(label9);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
+            Controls.Add(dtp);
+            Controls.Add(tbpass);
+            Controls.Add(tbnif);
+            Controls.Add(tbnome);
             Name = "Registar";
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -155,15 +156,15 @@
         }
 
         #endregion
-        private Button button1;
+        private Button btguardar;
         private Label label5;
         private Label label6;
         private Label label8;
         private Label label9;
-        private DateTimePicker dateTimePicker2;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private DateTimePicker dtp;
+        private TextBox tbpass;
+        private TextBox tbnif;
+        private TextBox tbnome;
         private PictureBox pictureBox1;
     }
 }

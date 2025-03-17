@@ -25,12 +25,6 @@ namespace Romão_Barber
             Registar k = new Registar();
             k.ShowDialog();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         public void listarClientes()
         {
 

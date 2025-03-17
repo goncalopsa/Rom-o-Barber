@@ -28,12 +28,6 @@ namespace Romão_Barber
             Servicos j = new Servicos();
             j.ShowDialog();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Inicial_Load(object sender, EventArgs e)
         {
             lbtipo.Text = VariaveisGlobais.TipoUtilApp;
@@ -49,34 +43,25 @@ namespace Romão_Barber
                 lbc.Visible = false;
             }
         }
-
         private void pbc_Click(object sender, EventArgs e)
         {
             Clientes d = new Clientes();
             d.ShowDialog();
         }
-
         private void pbpa_Click(object sender, EventArgs e)
         {
             Login d = new Login();
             d.ShowDialog();
         }
-
         private void pbpf_MouseHover(object sender, EventArgs e)
         {
             pbpf.Hide();
             pbpa.Show();
         }
-
         private void pbpa_MouseLeave(object sender, EventArgs e)
         {
             pbpa.Hide();
             pbpf.Show();
-        }
-
-        private void pbpf_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

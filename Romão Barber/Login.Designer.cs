@@ -111,7 +111,7 @@
             pbolhofechado.TabStop = false;
             pbolhofechado.Visible = false;
             pbolhofechado.Click += pbolhofechado_Click;
-            pbolhofechado.MouseLeave += pbolhofechado_MouseLeave;
+            //pbolhofechado.MouseLeave += pbolhofechado_MouseLeave;
             // 
             // pbolhoaberto
             // 
@@ -124,7 +124,7 @@
             pbolhoaberto.TabIndex = 11;
             pbolhoaberto.TabStop = false;
             pbolhoaberto.Click += pbolhoaberto_Click;
-            pbolhoaberto.MouseHover += pbolhoaberto_MouseHover;
+           // pbolhoaberto.MouseHover += pbolhoaberto_MouseHover;
             // 
             // Login
             // 

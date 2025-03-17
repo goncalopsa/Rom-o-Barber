@@ -33,20 +33,22 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
+            tbnome = new TextBox();
+            dtp = new DateTimePicker();
+            tbnif = new TextBox();
             label7 = new Label();
             cb = new CheckBox();
             pictureBox1 = new PictureBox();
+            label9 = new Label();
+            tbpass = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btguardar
             // 
-            btguardar.Location = new Point(298, 48);
+            btguardar.Location = new Point(298, 51);
             btguardar.Name = "btguardar";
-            btguardar.Size = new Size(168, 25);
+            btguardar.Size = new Size(168, 61);
             btguardar.TabIndex = 17;
             btguardar.Text = "Guardar";
             btguardar.UseVisualStyleBackColor = true;
@@ -55,7 +57,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(52, 95);
+            label3.Location = new Point(12, 136);
             label3.Name = "label3";
             label3.Size = new Size(114, 15);
             label3.TabIndex = 15;
@@ -79,33 +81,34 @@
             label1.TabIndex = 13;
             label1.Text = "Nome";
             // 
-            // textBox3
+            // tbnome
             // 
-            textBox3.Location = new Point(127, 9);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(339, 23);
-            textBox3.TabIndex = 12;
+            tbnome.Location = new Point(127, 9);
+            tbnome.Name = "tbnome";
+            tbnome.Size = new Size(339, 23);
+            tbnome.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // dtp
             // 
-            dateTimePicker1.Location = new Point(172, 89);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 11;
+            dtp.Location = new Point(132, 130);
+            dtp.Name = "dtp";
+            dtp.Size = new Size(200, 23);
+            dtp.TabIndex = 11;
             // 
-            // textBox1
+            // tbnif
             // 
-            textBox1.Location = new Point(127, 48);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 23);
-            textBox1.TabIndex = 9;
+            tbnif.Location = new Point(127, 48);
+            tbnif.Name = "tbnif";
+            tbnif.Size = new Size(153, 23);
+            tbnif.TabIndex = 9;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(392, 95);
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(380, 132);
             label7.Name = "label7";
-            label7.Size = new Size(35, 15);
+            label7.Size = new Size(46, 21);
             label7.TabIndex = 23;
             label7.Text = "Ativo";
             label7.TextAlign = ContentAlignment.TopRight;
@@ -113,12 +116,12 @@
             // cb
             // 
             cb.AutoSize = true;
-            cb.Location = new Point(438, 96);
+            cb.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cb.Location = new Point(432, 137);
             cb.Name = "cb";
             cb.Size = new Size(15, 14);
             cb.TabIndex = 22;
             cb.UseVisualStyleBackColor = true;
-            cb.CheckedChanged += cb_CheckedChanged;
             // 
             // pictureBox1
             // 
@@ -131,12 +134,31 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(39, 92);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 15);
+            label9.TabIndex = 26;
+            label9.Text = "Palavra Passe";
+            label9.TextAlign = ContentAlignment.TopRight;
+            // 
+            // tbpass
+            // 
+            tbpass.Location = new Point(127, 89);
+            tbpass.Name = "tbpass";
+            tbpass.Size = new Size(153, 23);
+            tbpass.TabIndex = 25;
+            // 
             // DetalhesBarbeiro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(504, 126);
+            ClientSize = new Size(504, 160);
             ControlBox = false;
+            Controls.Add(label9);
+            Controls.Add(tbpass);
             Controls.Add(pictureBox1);
             Controls.Add(label7);
             Controls.Add(cb);
@@ -144,11 +166,11 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox1);
+            Controls.Add(tbnome);
+            Controls.Add(dtp);
+            Controls.Add(tbnif);
             Name = "DetalhesBarbeiro";
-            WindowState = FormWindowState.Maximized;
+            StartPosition = FormStartPosition.CenterScreen;
             Load += DetalhesBarbeiro_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -161,11 +183,13 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
+        private TextBox tbnome;
+        private DateTimePicker dtp;
+        private TextBox tbnif;
         private Label label7;
         private CheckBox cb;
         private PictureBox pictureBox1;
+        private Label label9;
+        private TextBox tbpass;
     }
 }

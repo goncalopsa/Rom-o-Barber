@@ -60,6 +60,7 @@
             btcriar.TabIndex = 2;
             btcriar.Text = "Inserir Barbeiro";
             btcriar.UseVisualStyleBackColor = true;
+            btcriar.Click += btcriar_Click;
             // 
             // pbpa
             // 

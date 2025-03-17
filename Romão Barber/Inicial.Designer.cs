@@ -109,7 +109,7 @@
             lbnome.Size = new Size(38, 15);
             lbnome.TabIndex = 5;
             lbnome.Text = "label4";
-            lbnome.Click += label4_Click;
+           // lbnome.Click += label4_Click;
             // 
             // lbc
             // 
@@ -157,7 +157,7 @@
             pbpf.SizeMode = PictureBoxSizeMode.Zoom;
             pbpf.TabIndex = 9;
             pbpf.TabStop = false;
-            pbpf.Click += pbpf_Click;
+         //   pbpf.Click += pbpf_Click;
             pbpf.MouseHover += pbpf_MouseHover;
             // 
             // Inicial

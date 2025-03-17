@@ -30,7 +30,8 @@ namespace Romão_Barber
             try
             {
                 ligacao.Open();
-                string sql = "select * from barbeiros ";
+                string sql = "select * from barbeiros where 1 ";
+                barbeiros.Clear();
 
                 if (!string.IsNullOrWhiteSpace(tbpesquisar.Text))
                 {
@@ -94,6 +95,13 @@ namespace Romão_Barber
         private void Barbeiros_Load(object sender, EventArgs e)
         {
             ligacao = new MySqlConnection("Persist Security Info=false; server=localhost; database=Barbearia; uid=root; SslMode=none");
+            listaBarbeiros();
+        }
+
+        private void btcriar_Click(object sender, EventArgs e)
+        {
+            DetalhesBarbeiro x = new DetalhesBarbeiro();
+            x.ShowDialog();
             listaBarbeiros();
         }
     }
