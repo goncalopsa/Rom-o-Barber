@@ -36,17 +36,20 @@
             tbpassword = new TextBox();
             pbolhofechado = new PictureBox();
             pbolhoaberto = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pblogin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbolhofechado).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbolhoaberto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tbemail
             // 
             tbemail.Anchor = AnchorStyles.None;
             tbemail.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbemail.Location = new Point(262, 124);
+            tbemail.Location = new Point(262, 129);
             tbemail.Name = "tbemail";
             tbemail.PlaceholderText = "NIF";
             tbemail.Size = new Size(238, 39);
@@ -56,7 +59,7 @@
             // 
             pblogin.Anchor = AnchorStyles.None;
             pblogin.Image = (Image)resources.GetObject("pblogin.Image");
-            pblogin.Location = new Point(262, 169);
+            pblogin.Location = new Point(262, 174);
             pblogin.Name = "pblogin";
             pblogin.Size = new Size(238, 193);
             pblogin.SizeMode = PictureBoxSizeMode.Zoom;
@@ -92,7 +95,7 @@
             // 
             tbpassword.Anchor = AnchorStyles.None;
             tbpassword.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbpassword.Location = new Point(262, 179);
+            tbpassword.Location = new Point(262, 184);
             tbpassword.Name = "tbpassword";
             tbpassword.PasswordChar = '*';
             tbpassword.PlaceholderText = "palavra-passe";
@@ -103,7 +106,7 @@
             // 
             pbolhofechado.Anchor = AnchorStyles.None;
             pbolhofechado.Image = (Image)resources.GetObject("pbolhofechado.Image");
-            pbolhofechado.Location = new Point(528, 154);
+            pbolhofechado.Location = new Point(528, 159);
             pbolhofechado.Name = "pbolhofechado";
             pbolhofechado.Size = new Size(53, 100);
             pbolhofechado.SizeMode = PictureBoxSizeMode.Zoom;
@@ -111,29 +114,49 @@
             pbolhofechado.TabStop = false;
             pbolhofechado.Visible = false;
             pbolhofechado.Click += pbolhofechado_Click;
-            //pbolhofechado.MouseLeave += pbolhofechado_MouseLeave;
             // 
             // pbolhoaberto
             // 
             pbolhoaberto.Anchor = AnchorStyles.None;
             pbolhoaberto.Image = (Image)resources.GetObject("pbolhoaberto.Image");
-            pbolhoaberto.Location = new Point(506, 189);
+            pbolhoaberto.Location = new Point(506, 194);
             pbolhoaberto.Name = "pbolhoaberto";
             pbolhoaberto.Size = new Size(98, 29);
             pbolhoaberto.SizeMode = PictureBoxSizeMode.Zoom;
             pbolhoaberto.TabIndex = 11;
             pbolhoaberto.TabStop = false;
             pbolhoaberto.Click += pbolhoaberto_Click;
-           // pbolhoaberto.MouseHover += pbolhoaberto_MouseHover;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(-70, 22);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(208, 213);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 13;
+            pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Font = new Font("Comic Sans MS", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(144, -2);
+            label2.Name = "label2";
+            label2.Size = new Size(455, 52);
+            label2.TabIndex = 14;
+            label2.Text = "Faça já a sua Marcação";
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 450);
             ControlBox = false;
+            Controls.Add(label2);
+            Controls.Add(pictureBox2);
             Controls.Add(pbolhofechado);
             Controls.Add(pbolhoaberto);
             Controls.Add(tbpassword);
@@ -148,6 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbolhofechado).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbolhoaberto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +184,7 @@
         private TextBox tbpassword;
         private PictureBox pbolhofechado;
         private PictureBox pbolhoaberto;
+        private PictureBox pictureBox2;
+        private Label label2;
     }
 }

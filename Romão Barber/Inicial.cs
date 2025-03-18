@@ -39,6 +39,7 @@ namespace Romão_Barber
             }
             else
             {
+
                 pbc.Visible = false;
                 lbc.Visible = false;
             }
