@@ -64,5 +64,5 @@ namespace Romão_Barber
             pbpa.Hide();
             pbpf.Show();
         }
-    }//jorge
+    }
 }
